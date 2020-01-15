@@ -4,8 +4,9 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
-const productsRoutes = require('./api/routes/products');
-const ordersRouters = require('./api/routes/orders');
+const productsRoutes = require('./api/routes/products')
+const ordersRouters = require('./api/routes/orders')
+const usersRouters = require('./api/routes/users')
 
 mongoose.connect(`mongodb+srv://nodeShopUser:Ledai12345678@cluster0-x7tct.mongodb.net/test?retryWrites=true&w=majority`, {
   useUnifiedTopology: true,
@@ -19,7 +20,7 @@ app.use(bodyParser.json())
 
 app.use('/products', productsRoutes);
 app.use('/orders', ordersRouters);
-
+app.use('/users', usersRouters);
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');

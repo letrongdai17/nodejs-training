@@ -1,5 +1,6 @@
 {
   "env": {
-    "MONGO_ATLAS_PW": "Ledai12345678"
+    "MONGO_ATLAS_PW": "Ledai12345678",
+    "JWT_KEY": "shop-secret-key"
   }
 }
